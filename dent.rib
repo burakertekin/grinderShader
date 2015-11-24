@@ -1,0 +1,7 @@
+#dent.rib
+AttributeBegin
+Surface "aniso"
+Rotate 90 1 0 0
+Cylinder 0.99 0.625 0.63636 360
+AttributeEnd
+

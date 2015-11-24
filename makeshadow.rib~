@@ -1,0 +1,23 @@
+#makeshadow.rib
+Display "zbuffer.tiff" "zfile" "z"
+
+Projection "perspective" "fov" [ 50 ]
+
+#View Settings
+Translate 0 1 1.7
+#rotating x
+Rotate -50 1 0 0
+#rotating y
+Rotate 180 0 1 0
+WorldBegin
+
+
+
+ReadArchive "grinder.rib"
+	Color [ 0 1 0 ]
+	Patch "bilinear" "P" [ -5 -1 -5
+			       5 -1 -5
+			      -5 -1 5
+			       5 -1 5 ]
+WorldEnd
+MakeShadow "zbuffer.tiff" "map.shad"

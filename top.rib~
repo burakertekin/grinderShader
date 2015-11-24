@@ -1,0 +1,6 @@
+#top.rib
+AttributeBegin
+Displacement "texdisplace"
+Rotate 90 1 0 0
+Disk 0.625 0.95 360
+AttributeEnd

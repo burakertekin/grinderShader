@@ -1,0 +1,9 @@
+#plasticStrap.rib
+AttributeBegin
+Displacement "plasticDis"
+Surface "plastic"
+Color [ 1 1 1 ]
+Rotate 90 1 0 0
+Cylinder 0.995 0.625 0.67044 360
+AttributeEnd
+

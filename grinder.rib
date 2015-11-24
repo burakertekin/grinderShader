@@ -1,0 +1,75 @@
+#grinder.rib - geometry rib file for grinder object
+
+#top
+AttributeBegin
+Attribute "displacementbound" "sphere" [ 0.06 ]
+Displacement "texdisplace"
+Surface "texturedAniso"
+TransformBegin
+Translate 0 0.05 0
+ReadArchive "top.rib"
+TransformEnd
+AttributeEnd
+
+Displacement "noisedisp"
+#top edge
+TransformBegin
+Translate 0 -0.625 0
+ReadArchive "topEdge.rib"
+TransformEnd
+
+#serration
+TransformBegin
+ReadArchive "serration.rib"
+
+#short side - 1
+Translate 0 -0.0852 0
+ReadArchive "shortSide.rib"
+
+#dent
+Translate 0 -0.0568 0
+ReadArchive "filler.rib"
+ReadArchive "dent.rib"
+
+#longside - 2
+Translate 0 -0.01136 0
+ReadArchive "filler.rib"
+ReadArchive "longSide.rib"
+
+#strap	
+Translate 0 -0.0886 0
+ReadArchive "filler.rib"
+ReadArchive "plasticStrap.rib"
+Displacement "noisedisp"
+ReadArchive "filler.rib"
+
+#short side - 1
+Translate 0 -0.04544 0
+ReadArchive "shortSide.rib"
+ReadArchive "filler.rib"
+
+#dent
+Translate 0 -0.0568 0
+ReadArchive "dent.rib"
+
+#mid side - 3
+Translate 0 -0.01136 0
+ReadArchive "filler.rib"
+ReadArchive "midSide.rib"
+
+#dent
+Translate 0 -0.0852 0
+ReadArchive "filler.rib"
+ReadArchive "dent.rib"
+
+#short side
+Translate 0 -0.01136 0
+ReadArchive "filler.rib"
+ReadArchive "shortSide.rib"
+TransformEnd
+
+#bottom edge
+TransformBegin
+Translate 0 -1.133 0
+ReadArchive "bottomEdge.rib"
+TransformEnd

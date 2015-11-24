@@ -1,0 +1,7 @@
+#topEdge.rib
+AttributeBegin
+Surface "aniso"
+Rotate 90 1 0 0
+Torus 0.94 0.06 270 360 360
+AttributeEnd
+

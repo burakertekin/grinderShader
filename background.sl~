@@ -1,0 +1,14 @@
+surface background(float Ka = 1;
+		float Kd = .09;
+		float Ks = 0.5;
+		float roughness = .1;
+		color specularcolor = 1;)
+{
+	normal Nf = faceforward (normalize(N),I);
+	vector V = -normalize(I);
+
+	color Ct = color texture("background.tex", (s*5.5)-1.8, (t*5.5)-2);
+
+	Oi = Os;
+    Ci = Oi * (Ct * (Ka*ambient() + Kd*diffuse(Nf) + specularcolor * Ks * (specular(Nf, V, roughness))));
+}

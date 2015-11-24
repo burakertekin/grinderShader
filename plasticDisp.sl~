@@ -1,0 +1,5 @@
+displacement plasticDisp()
+{
+	P = P;
+	N = N;
+}

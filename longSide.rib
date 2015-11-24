@@ -1,0 +1,7 @@
+#longSide.rib
+AttributeBegin
+Surface "aniso"
+Rotate 90 1 0 0
+Cylinder 1 0.625 0.7136 360
+AttributeEnd
+

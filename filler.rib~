@@ -1,0 +1,7 @@
+#filler.rib
+AttributeBegin
+Surface "aniso"
+Color [ 0.097 0.398 0.296 ]
+Rotate 90 1 0 0
+Disk 0.625 1 360
+AttributeEnd

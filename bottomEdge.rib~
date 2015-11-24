@@ -1,0 +1,8 @@
+#bottomEdge.rib
+AttributeBegin
+Surface "aniso"
+Color [ 0.097 0.398 0.296 ]
+Rotate 90 1 0 0
+Torus 0.95 0.05 0 90 360
+AttributeEnd
+

@@ -1,0 +1,8 @@
+#serration.rib
+AttributeBegin
+Displacement "serration"
+Surface "aniso"
+Rotate 90 1 0 0
+Cylinder 1 0.625 0.7102 360
+AttributeEnd
+

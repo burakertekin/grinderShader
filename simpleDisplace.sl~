@@ -1,0 +1,35 @@
+displacement serration(
+	float dispScale=0.003;
+	float RepeatS=160;
+	float RepeatT=1; 
+	float trueDisp=1;
+	float min = 0.01;
+	float max = 0.3;
+	float mmin = -0.05;
+	float mmax = -0.3;)
+{
+	// make a copy of the normal
+	normal NN = normalize(N);
+	point PP;
+
+	// now calculate the new disp value for P
+	float ss=mod(s*RepeatS,1);
+	float tt=mod(t*RepeatT,1);
+	/*
+	point start = point(0, 0, 0);
+	point end = point(0.9, 0.9, 0);
+	point start1 = point(0, 0, 0);
+	point end1 = point(-0.9, 0.9, 0);
+	point here = point(ss, tt, 0);
+	point there = point(tt, ss, 0);
+	*/
+
+	float disp=sin(ss*PI*2)*sin(tt*PI*2);
+	float smoothup = smoothstep(min, max, t);
+	float smoothdown = smoothstep(mmin, mmax, t);
+
+	PP=(P)-((NN-2)*disp*dispScale*smoothup*smoothdown);
+	N=calculatenormal(PP);
+	if(trueDisp == 1)
+		P=PP;
+}
